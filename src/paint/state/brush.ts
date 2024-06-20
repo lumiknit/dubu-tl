@@ -1,6 +1,5 @@
 import { Accessor, Setter, createSignal } from "solid-js";
 
-import { Size } from "@/common";
 
 import { ToolType } from "..";
 import { Polygon, ellipsePolygon, rectanglePolygon } from "../polygon";

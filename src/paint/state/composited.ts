@@ -11,25 +11,21 @@ import {
 	CanvasCtx2D,
 	Pos,
 	Rect,
-	ctxToBlob,
-	posOnLine,
 	rgba,
 	rgbaForStyle,
 	rotateScale2D,
-	rotateScaleRaw2D,
+	rotateScaleRaw2D
 } from "@/common";
 import {
 	ERASER_TYPE_TOOLS,
 	Layer,
 	ToolType,
-	createEmptyLayer,
-	putOptimizedLayer,
+	putOptimizedLayer
 } from "..";
 
 import {
 	Brush,
 	WithBrushSetSignal,
-	WithConfigSignal,
 	WithCursorSignal,
 	WithDisplaySignal,
 	WithImageInfo,
@@ -40,7 +36,7 @@ import {
 	getTempLayerCtx,
 	insertNewLayer,
 	renderBlurredLayer,
-	setBrushShape,
+	setBrushShape
 } from ".";
 
 export const renderBlurredLayerFromState = (z: WithUIInfo & WithImageInfo) =>

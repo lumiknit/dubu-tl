@@ -1,5 +1,6 @@
-import { Component, onMount, onCleanup, JSX, createMemo } from "solid-js";
+import { Component, JSX, createMemo, onCleanup, onMount } from "solid-js";
 
+import { addGestureListeners } from "@/common/gesture-handler";
 import {
 	PaintState,
 	checkerBoardStyle,
@@ -7,7 +8,6 @@ import {
 	stepForPaintState,
 } from ".";
 import Cursor from "./Cursor";
-import { addGestureListeners } from "@/common/gesture-handler";
 
 import "./index.scss";
 import { createPaintGestureContext } from "./state/gesture";

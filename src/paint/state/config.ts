@@ -1,7 +1,7 @@
 import { Accessor, Setter, createSignal } from "solid-js";
 
-import { CompiledPaintConfig, PaintConfig, compilePaintConfig } from "..";
 import { rgbToStyle, styleBgCheckerboard } from "solid-tiny-color";
+import { CompiledPaintConfig, PaintConfig, compilePaintConfig } from "..";
 
 /** An object contains signal of config */
 export type WithConfigSignal = {

@@ -1,9 +1,9 @@
 import {
-	Pos,
-	ORIGIN,
 	CanvasCtx2D,
-	extendBoundaryByPixel,
 	EMPTY_BOUNDARY,
+	ORIGIN,
+	Pos,
+	extendBoundaryByPixel,
 } from "@/common";
 
 import { emptyCanvasContext, putContextToContext } from "@/common";

@@ -1,11 +1,12 @@
+import { rotateScaleRaw2D, subPos } from "@/common";
 import {
 	GestureEventContext,
 	createGestureEventContext,
 } from "@/common/gesture-handler";
 import {
 	PaintState,
-	handleDrawStart,
 	handleDrawEnd,
+	handleDrawStart,
 	invertDisplayTransform,
 	moveRealCursorPos,
 	restoreDisplayTransform,
@@ -15,7 +16,6 @@ import {
 	updateAllCursorPos,
 	updateRealCursorPos,
 } from ".";
-import { rotateScaleRaw2D, subPos } from "@/common";
 
 export const createPaintGestureContext = (
 	z: PaintState,

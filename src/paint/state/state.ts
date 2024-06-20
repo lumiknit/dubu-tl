@@ -2,11 +2,10 @@ import {
 	AppWrap,
 	Boundary,
 	EMPTY_BOUNDARY,
-	Pos,
 	boundaryToRect,
 	extractCanvasRect,
 	limitBoundaryToOriginRect,
-	posOnLine,
+	posOnLine
 } from "@/common";
 import toast from "solid-toast";
 
@@ -15,6 +14,8 @@ import { Action, UpdateImgAction } from "../actions";
 
 import { ERASER_TYPE_TOOLS, IMAEG_MODIFY_TOOLS, PaintConfig } from "..";
 
+import { Accessor, Setter, createSignal } from "solid-js";
+import { execAction, revertAction } from "./action";
 import { WithBrushSetSignal, installBrushSetSignal } from "./brush";
 import { clearTempLayer, renderBlurredLayerFromState } from "./composited";
 import { WithConfigSignal, installConfigSignal } from "./config";
@@ -27,8 +28,7 @@ import {
 import { DrawState, stepDrawShape, stepSpoid, stepText } from "./draw";
 import {
 	WithImageInfo,
-	installImageInfo,
-	renderBlurredLayer,
+	installImageInfo
 } from "./image-info";
 import { WithPaletteSignal, installPaletteSignal } from "./palette";
 import { WithToolSettingsSignal, installToolSettingsSignal } from "./tool";
@@ -38,8 +38,6 @@ import {
 	getTempLayerCtx,
 	installUIInfo,
 } from "./ui";
-import { execAction, revertAction } from "./action";
-import { Accessor, Setter, createSignal } from "solid-js";
 
 export type PaintState = WithBrushSetSignal &
 	WithConfigSignal &

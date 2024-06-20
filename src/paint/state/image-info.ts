@@ -1,13 +1,11 @@
 import { Accessor, Setter, batch, createSignal } from "solid-js";
-import { rgbToStyle } from "solid-tiny-color";
 
 import { CanvasCtx2D, Size, emptyCanvasContext } from "@/common";
 
 import {
 	Layer,
-	PaintConfigCanvasBackground,
 	createEmptyLayer,
-	drawLayerToCanvas,
+	drawLayerToCanvas
 } from "..";
 
 export type WithImageInfo = {
